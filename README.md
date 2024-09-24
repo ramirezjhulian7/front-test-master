@@ -96,14 +96,23 @@ npm run lint
 ```bash
 ├── public/              # Archivos públicos (index.html, favicon, etc.)
 ├── src/
-│   ├── components/      # Componentes React (barra de búsqueda, grid de imágenes, etc.)
+│   ├── components/      # Componentes React
+│   │   ├── ImageCard/   # Componente de cada tarjeta de imagen
+│   │   ├── ImageGrid/   # Componente del grid de imágenes
+│   │   └── SearchBar/   # Barra de búsqueda
+│   ├── hooks/           # Custom Hooks
 │   ├── services/        # Llamadas a la API mock
 │   ├── styles/          # Estilos (CSS y assets como imágenes)
-│   ├── tests/           # Pruebas unitarias con Jest
-│   └── App.js           # Componente principal
-├── .eslintrc.js         # Configuración de ESLint
-├── jest.config.js       # Configuración de Jest
-└── package.json         # Configuración del proyecto y dependencias
+│   ├── tests/           # Pruebas unitarias
+│   ├── App.js           # Componente principal
+│   ├── App.test.js      # Pruebas del componente App
+│   ├── index.js         # Archivo de entrada
+│   └── index.css        # Estilos globales
+├── .gitignore           # Ignora archivos no necesarios en el repositorio
+├── eslint.config.mjs    # Configuración de ESLint
+├── mocks.config.js      # Configuración de la API mock
+├── package.json         # Configuración del proyecto y dependencias
+└── README.md            # Documentación del proyecto
 ```
 
 ---
