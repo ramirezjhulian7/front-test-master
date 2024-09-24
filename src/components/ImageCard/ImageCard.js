@@ -123,7 +123,7 @@ const ImageCard = ({ image, onLikeToggle }) => {
         <PriceTag />
         <PriceText>{image.price} €</PriceText>
         <img src={image.main_attachment.small} alt={image.title} />
-        <LikeButtonWeb aria-label="like" liked={liked} onClick={handleLike}>
+        <LikeButtonWeb aria-label="like" data-testid="like-button-web" liked={liked} onClick={handleLike}>
           <FaThumbsUp />
           <br />
           <span>{likesCount}</span>
@@ -133,7 +133,7 @@ const ImageCard = ({ image, onLikeToggle }) => {
       <p>
         <span style={{ color: 'grey', fontFamily: 'Droid Serif' }}>By</span> <span style={{ fontFamily: 'Droid Serif' }}>{image.author}</span>
       </p>
-      <LikeButton aria-label="like" liked={liked} onClick={handleLike}>
+      <LikeButton aria-label="like" data-testid="like-button-mobile" liked={liked} onClick={handleLike}>
         <span>{likesCount}</span>
         <FaThumbsUp />
       </LikeButton>

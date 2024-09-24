@@ -1,70 +1,118 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🖼️ Image Gallery SPA
 
-## Available Scripts
+Este es un proyecto de una **Single Page Application (SPA)** desarrollado en **React** que permite visualizar una galería de imágenes. La aplicación incluye las siguientes funcionalidades:
 
-In the project directory, you can run:
+- **Scroll infinito** para cargar más imágenes dinámicamente.
+- **Barra de búsqueda** que filtra las imágenes localmente según el título.
+- Funcionalidad de **like/unlike** para cada imagen.
+- Diseño **responsivo** para que funcione en diferentes tamaños de pantalla (móvil, tablet, desktop).
+- **Pruebas unitarias** para componentes clave.
+- **Linteo del código** para mantener consistencia y buenas prácticas.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tecnologías Usadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: Framework JavaScript para la construcción de interfaces de usuario.
+- **Styled Components**: Librería para aplicar estilos en componentes de React.
+- **React Icons**: Para incluir íconos en la interfaz.
+- **Mock API**: Se usa una API mock para simular el comportamiento del servidor.
+- **Jest** y **React Testing Library**: Para ejecutar pruebas unitarias.
+- **ESLint**: Para el linteo del código, siguiendo buenas prácticas.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Instalación
 
-### `npm run build`
+Sigue los siguientes pasos para configurar y ejecutar el proyecto en tu máquina local.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clona el repositorio**:
+   ```bash
+   git clone <URL-del-repositorio>
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Instala las dependencias**:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Ejecuta el servidor mock**:
+   La API mock se encarga de simular el backend. Para ejecutarla, usa el siguiente comando:
+   ```bash
+   npm run mocks
+   ```
 
-### `npm run eject`
+4. **Ejecuta la aplicación**:
+   Inicia la aplicación en modo de desarrollo.
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+La aplicación se ejecutará en el navegador en `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚙️ Funcionalidades Clave
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1. Scroll Infinito
+Permite cargar imágenes dinámicamente a medida que el usuario navega por la página. Cada vez que se llega al final, más imágenes se cargan desde el servidor mock.
 
-## Learn More
+### 2. Búsqueda en Tiempo Real
+Un campo de búsqueda permite filtrar las imágenes por su título de manera local. Si el campo de búsqueda está vacío, se muestran todas las imágenes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Funcionalidad Like/Unlike
+Cada imagen tiene la opción de ser marcada con "like" o "unlike". Esta acción es gestionada en el estado local de la aplicación.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Diseño Responsivo
+La aplicación adapta su diseño a diferentes tamaños de pantalla, con un grid ajustable que va desde una columna en móviles hasta cuatro columnas en pantallas grandes.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🧪 Pruebas Unitarias
 
-### Analyzing the Bundle Size
+Se han escrito **pruebas unitarias** para garantizar la funcionalidad de los componentes clave utilizando **Jest** y **React Testing Library**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Para ejecutar las pruebas, usa el siguiente comando:
 
-### Making a Progressive Web App
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🔍 Linteo de Código
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+El proyecto utiliza **ESLint** para mantener el código limpio y consistente. El linteo se realiza en cada commit o también puede ser ejecutado manualmente con:
 
-### Deployment
+```bash
+npm run lint
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📂 Estructura del Proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+├── public/              # Archivos públicos (index.html, favicon, etc.)
+├── src/
+│   ├── components/      # Componentes React (barra de búsqueda, grid de imágenes, etc.)
+│   ├── services/        # Llamadas a la API mock
+│   ├── styles/          # Estilos (CSS y assets como imágenes)
+│   ├── tests/           # Pruebas unitarias con Jest
+│   └── App.js           # Componente principal
+├── .eslintrc.js         # Configuración de ESLint
+├── jest.config.js       # Configuración de Jest
+└── package.json         # Configuración del proyecto y dependencias
+```
+
+---
+
+## 📜 Contacto
+
+**Jhulian Ramírez**  
+Para cualquier consulta o sugerencia, puedes contactarme a través de:
+
+- **Correo Electrónico**: [ramirezjhulian7@gmail.com](mailto:ramirezjhulian7@gmail.com)  
+- **LinkedIn**: [jhulianramirez](https://www.linkedin.com/in/jhulianramirez/)
+- **Git**: [jhulianramirez](https://github.com/ramirezjhulian7/front-test-master)
