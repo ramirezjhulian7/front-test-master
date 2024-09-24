@@ -1,5 +1,5 @@
 
-# 🖼️ Image Gallery SPA
+# Image Gallery SPA
 
 Este es un proyecto de una **Single Page Application (SPA)** desarrollado en **React** que permite visualizar una galería de imágenes. La aplicación incluye las siguientes funcionalidades:
 
@@ -12,7 +12,7 @@ Este es un proyecto de una **Single Page Application (SPA)** desarrollado en **R
 
 ---
 
-## 🛠️ Tecnologías Usadas
+## Tecnologías Usadas
 
 - **React**: Framework JavaScript para la construcción de interfaces de usuario.
 - **Styled Components**: Librería para aplicar estilos en componentes de React.
@@ -23,7 +23,7 @@ Este es un proyecto de una **Single Page Application (SPA)** desarrollado en **R
 
 ---
 
-## 📦 Instalación
+## Instalación
 
 Sigue los siguientes pasos para configurar y ejecutar el proyecto en tu máquina local.
 
@@ -53,7 +53,7 @@ La aplicación se ejecutará en el navegador en `http://localhost:3000`.
 
 ---
 
-## ⚙️ Funcionalidades Clave
+## Funcionalidades Clave
 
 ### 1. Scroll Infinito
 Permite cargar imágenes dinámicamente a medida que el usuario navega por la página. Cada vez que se llega al final, más imágenes se cargan desde el servidor mock.
@@ -69,7 +69,7 @@ La aplicación adapta su diseño a diferentes tamaños de pantalla, con un grid 
 
 ---
 
-## 🧪 Pruebas Unitarias
+## Pruebas Unitarias
 
 Se han escrito **pruebas unitarias** para garantizar la funcionalidad de los componentes clave utilizando **Jest** y **React Testing Library**.
 
@@ -81,7 +81,7 @@ npm test
 
 ---
 
-## 🔍 Linteo de Código
+## Linteo de Código
 
 El proyecto utiliza **ESLint** para mantener el código limpio y consistente. El linteo se realiza en cada commit o también puede ser ejecutado manualmente con:
 
@@ -91,7 +91,7 @@ npm run lint
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```bash
 ├── public/              # Archivos públicos (index.html, favicon, etc.)
@@ -117,7 +117,7 @@ npm run lint
 
 ---
 
-## 📜 Contacto
+## Contacto
 
 **Jhulian Ramírez**  
 Para cualquier consulta o sugerencia, puedes contactarme a través de:
